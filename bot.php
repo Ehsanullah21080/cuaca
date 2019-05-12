@@ -62,7 +62,7 @@ function cuaca($keyword) {
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/menu') {
-    $text = "Halo Kak ^_^\nAku Bot Prediksi Cuaca, Kamu bisa mengetahui prediksi cuaca di daerah kamu sesuai dengan sumber BMKG";
+    $text = "Halo Dear ^_^\nThis bot is for disaster evacuation.";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
