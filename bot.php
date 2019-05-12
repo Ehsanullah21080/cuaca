@@ -43,9 +43,9 @@ function cuaca($keyword) {
     $response = Unirest\Request::get("$uri");
 
     $json = json_decode($response->raw_body, true);
-    $result = "Halo Dear ^_^ This is meeeeeeee ";
+    $result = "Halo Dear ^_^ This is weather information of ";
 	$result .= $json['name'];
-	$result .= " Dan Sekitarnya";
+	$result .= " weather";
 	$result .= "\n\nCuaca : ";
 	$result .= $json['weather']['0']['main'];
 	$result .= "\nDeskripsi : ";
