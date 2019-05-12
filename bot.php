@@ -113,5 +113,9 @@ if (isset($balas)) {
 
     $client->replyMessage($balas);
 }
+if ($event instanceof LocationMessage) 
+{
+   $bot->replyText($event->getReplyToken(), "Latitude: {$event->getLatitude()}, Longtitude: {$event->getLongitude()}");
+ }
 
 ?>
