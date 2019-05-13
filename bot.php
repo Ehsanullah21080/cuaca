@@ -89,7 +89,19 @@ if($message['type']=='text') {
             )
         );
     }
-
+if($message['type']=='location')
+{
+	$balas = array(
+							'replyToken' => $replyToken,														
+							'messages' => array(
+								array(
+										'type' => 'text',									
+										'text' => 'send me your location ^_^'										
+									
+									)
+							)
+						);
+	
 }else if($message['type']=='sticker')
 {	
 	$balas = array(
@@ -117,5 +129,6 @@ if ($event instanceof LocationMessage)
 {
    $bot->replyText($event->getReplyToken(), "Latitude: {$event->getLatitude()}, Longtitude: {$event->getLongitude()}");
  }
+
 
 ?>
