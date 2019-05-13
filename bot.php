@@ -61,8 +61,8 @@ function cuaca($keyword) {
 # require_once('./src/function/hard.php');
 
 //show menu, saat join dan command /menu
-if ($type == 'join' || $command == '/menu') {
-    $text = "Halo Dear ^_^\nThis bot is for disaster evacuation.";
+if ($type == 'join' || $command == '/location') {
+    $text = "Halo Dear ^_^\nsend your location....";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
