@@ -75,6 +75,7 @@ if ($type == 'join' || $command == '/location') {
 }
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/nearstation') {
+	$mysqli = new mysqli(host="localhost", "root", "newrootpassword", "Evac-Sta");
     $text = "Halo Dear ^_^\ntokai digacomai";
     $balas = array(
         'replyToken' => $replyToken,
