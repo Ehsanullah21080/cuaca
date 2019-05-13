@@ -5,6 +5,17 @@ Modified @ Farzain - zFz
 2017
 
 */
+$servername = "localhost"
+$username = "root"
+$password = "newrootpassword"
+$conn = new mysqli($servername, $username, $password);
+if ($conn->connect_error){
+	die("Connection failed: ". $conn->connect_error);
+}
+echo "Connection successfully";
+
+
+
 
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
@@ -75,7 +86,6 @@ if ($type == 'join' || $command == '/location') {
 }
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/nearstation') {
-	$mysqli = new mysqli(host="localhost", "root", "newrootpassword", "Evac-Sta");
     $text = "Halo Dear ^_^\ntokai digacomai";
     $balas = array(
         'replyToken' => $replyToken,
@@ -87,7 +97,6 @@ if ($type == 'join' || $command == '/nearstation') {
         )
     );
 }
-
 
 //pesan bergambar
 if($message['type']=='text') {
