@@ -73,18 +73,6 @@ if ($type == 'join' || $command == '/menu') {
         )
     );
 }
-if ($type == 'join' || $command == '/location') {
-    $text = "Halo Dear ^_^\nplease send me your location..";
-    $balas = array(
-        'replyToken' => $replyToken,
-        'messages' => array(
-            array(
-                'type' => 'text',
-                'text' => $text
-            )
-        )
-    );
-}
 
 //pesan bergambar
 if($message['type']=='text') {
