@@ -73,6 +73,20 @@ if ($type == 'join' || $command == '/location') {
         )
     );
 }
+//show menu, saat join dan command /menu
+if ($type == 'join' || $command == '/nearstation') {
+    $text = "Halo Dear ^_^\ntokai digacomai";
+    $balas = array(
+        'replyToken' => $replyToken,
+        'messages' => array(
+            array(
+                'type' => 'text',
+                'text' => $text
+            )
+        )
+    );
+}
+
 
 //pesan bergambar
 if($message['type']=='text') {
